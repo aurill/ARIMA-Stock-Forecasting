@@ -1,46 +1,59 @@
-# Project Objective: 
-
-Task: Use Stock Diversification Principles to decide how J$50 million JMD will be spent across five (5) stocks namely: Grace Kennedy (GK), Caribbean Cement Company Limited (CCC), 138 Student Living Jamaica Limited (138SL), Jamaica Broilers Group (JBG), & Jamaica Public Service (JPS7). 
-
-# Grace Kennedy Stock (GK) ARIMA Forecast
+# Jamaican Stock Investment Strategy
 
 ## Overview
-This repository implements an ARIMA (AutoRegressive Integrated Moving Average) forecast model for predicting the Tuesday End-of-Day (EOD) Closing price of Grace Kennedy Stock (GK). The model involves data loading, stationarity checks using the Augmented Dickey Fuller (ADF) Test, and parameter tuning based on ACF and PACF plots. The selected ARIMA model of order (1, 1, 1) is used for forecasting.
+This repository outlines a comprehensive investment strategy for deploying J$50 million JMD across five stocks listed on the Jamaica Stock Exchange. The strategy incorporates Short-Term Investments utilizing ARIMA models, sentiment analysis, and various forms of technical and fundamental analysis. Each stock's ARIMA model, along with additional insights, is detailed below.
 
-## Grace Kennedy Stock Insights
-The ARIMA model for GK Stock provides insights into the stock's behavior and future predictions. Key observations and decisions include:
+## Grace Kennedy Stock - (GK) 
+The ARIMA model for Grace Kennedy Stock (GK) involves:
+- Data loading and stationarity checks using the Augmented Dickey Fuller (ADF) Test.
+- Applying differencing once to achieve stationarity.
+- Conducted Model parameter determination based on ACF and PACF plots.
+- Conducted Model evaluation using AIC, BIC, and MSE.
+- Selection of the BIC model of order (1,1,1) for forecasting.
+- Did a Performance metrics assessment, revealing concerns about the F1 Score.
+- Additional technical and fundamental analysis insights, including a recent trading volume spike on November 22, 2023 that might have happened due to investors taking advantage of dividend capture.
+- Investment decision: Invest $10,000,000 JMD in GK due to expected low trading activity after the dividend payment date. 
 
-1. **Stationarity Check:**
-   - The data was made stationary using differencing based on the Augmented Dickey Fuller (ADF) Test.
+## Caribbean Cement Company - (CCC) 
+The ARIMA model for Caribbean Cement Stock (CCC) involves:
+- Data loading and stationarity checks using the ADF Test.
+- Determining model parameters based on ACF and PACF plots.
+- Choosing the ARIMA(1,0,0) model after evaluating different models based on AIC, BIC, and MSE.
+- Performance metrics assessment, predicting a Tuesday EOD closing price of $51.00.
+- Additional insights from candlestick patterns indicating selling pressure.
+- Investment decision: Invest $7,000,000 JMD in CCC due to predicted market movement.
 
-2. **Model Evaluation:**
-   - Different ARIMA models were evaluated based on AIC, BIC, and MSE.
-   - The BIC model of order (1, 1, 1) was chosen for forecasting.
+## 138 Student Living Jamaica - 138SL
+The ARIMA model for 138 Student Living Jamaica involves:
+- Data loading and stationarity checks using the ADF Test.
+- Applying differencing and selecting the BIC model of order (1,1,1) for forecasting.
+- Performance metrics assessment, predicting a Tuesday EOD closing price of $4.16.
+- Observed a bearish trend in the stock market, consistent with ARIMA forecasts.
+- Investment decision: Invest $6,000,000 JMD in 138SL due to expected bearish trend continuation.
 
-3. **Forecasting Results:**
-   - The model forecasted a Tuesday EOD Closing price under BIC, estimating it at $75.49.
+## Jamaica Public Service - JPS7
+The ARIMA model for Jamaica Public Service (JPS7) involves:
+- Data loading and stationarity checks using the ADF Test.
+- Determining model parameters based on ACF and PACF plots.
+- Choosing the ARIMA(1,0,1) model.
+- Performance metrics assessment, predicting market movement.
+- Observed a bullish trend in the stock market, consistent with ARIMA forecasts.
+- Investment decision: Invest $25,000,000 JMD in JPS7 due to expected bullish trend. 
 
-4. **Performance Metrics:**
-   - Metrics such as MAE, MSE, RMSE, and F1 score were used to assess model quality.
-   - No signs of underfitting or overfitting were observed in regression metrics.
-
-5. **Concerns and Further Analysis:**
-   - The F1 Score raised concerns, indicating the need for further research.
-   - The model forecasted the same closing price as the Friday EOD Stock Price, suggesting potential underfitting.
-
-6. **Additional Analysis:**
-   - Technical and fundamental analysis were employed for a more comprehensive insight.
-   - A recent trading volume spike on November 22, 2023, was linked to an upcoming Interim Payment dividend on December 15, 2023.
-
-7. **Investment Decision:**
-   - Due to potential low trading activity after the Interim Payment dividend, a $10,000,000 JMD investment in GK is recommended for this week.
-   - The report recognizes the long-standing quality of GK as a Blue-Chip Stock, justifying a significant investment.
+## Jamaica Broilers Group - JBG
+The ARIMA model for Jamaica Public Service (JPS7) involves:
+- Data loading and stationarity checks using the ADF Test.
+- Determining model parameters based on ACF and PACF plots.
+- Choosing the ARIMA (0,1,0) model.
+- Performance metrics assessment, predicting market movement.
+- Observed a bearish trend in the stock market, consistent with ARIMA forecasts.
+- Investment decision: Invest $2,000,000 JMD in JBG due to expected bearish trend. 
 
 
 ## How to Use
-1. Clone the repository: `git clone https://github.com/aurill/GK_Stock_ARIMA_Forecast.git`
-2. Open and run the Jupyter notebook [GK_Stock_Forecast.ipynb] to explore the ARIMA model implementation.
-3. Review the findings, insights, and investment recommendations in the notebook.
+1. Clone the repository: `git clone https://github.com/aurill/Jamaican_Stock_Investment_Strategy.git`
+2. Explore the detailed insights and investment decisions for each stock in the respective sections.
+3. Apply the investment strategy based on the provided analyses and forecasts.
 
 ## Dependencies
 - Python 3.12
@@ -48,5 +61,5 @@ The ARIMA model for GK Stock provides insights into the stock's behavior and fut
 - Libraries: pandas, numpy, matplotlib, seaborn, statsmodels, scikit-learn, itertools, tabulate
 
 ## Acknowledgments
-- The dataset used in this project is sourced from [GK_Quaterly_Stock_Prices.xlsx].
+- Data sourced from the Jamaica Stock Exchange.
 
